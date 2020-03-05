@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TicketmasterApiService } from './ticketmaster-api.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'stumble-app';
+
+  constructor(private ticketMasterApi: TicketmasterApiService) { }
+
+  loadData() {
+    console.log('OKAYYYYY JOHNATHON!');
+    this.ticketMasterApi.callApi().subscribe(data => {
+      console.log(data);
+    })
+  }
 }
