@@ -1,0 +1,36 @@
+<div class="search-bar-container">
+  <!-- <label>
+    Interests
+    <input type="checkbox" name="interest" value="music" /> Music
+    <input type="checkbox" name="interest" value="sports" /> Sports
+    <input type="checkbox" name="interest" value="arts" /> Arts & Theater
+    <input type="checkbox" name="interest" value="family" /> Family
+  </label> -->
+  <p>Interests</p>
+    <select>
+    <option name="interest" value="music">Music</option> 
+    <option name="interest" value="sports">Sports</option>     
+    <option name="interest" value="arts">Arts & Theater</option>  
+    <option name="interest" value="family">Family</option>     
+</select>  
+<br>
+  <label>
+    Price
+    <input type="checkbox" name="interest" value="price" />
+  </label>
+  <br>
+  <label>
+    Dates
+    <input type="checkbox" name="interest" value="dates" />
+  </label>
+  <br>
+  <label>
+    Location
+    <input type="checkbox" name="interest" value="location" />
+  </label>
+  <br>
+  <button (click)="onSearch()">
+    Search
+  </button>
+  <br>
+</div>
