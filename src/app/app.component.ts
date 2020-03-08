@@ -11,10 +11,4 @@ export class AppComponent {
 
   constructor(private ticketMasterApi: TicketmasterApiService) { }
 
-  loadData() {
-    console.log('OKAYYYYY JOHNATHON!');
-    this.ticketMasterApi.callApi().subscribe(data => {
-      console.log(data);
-    })
-  }
 }
