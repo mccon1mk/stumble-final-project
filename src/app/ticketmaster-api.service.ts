@@ -7,12 +7,20 @@ import { HttpClient } from '@angular/common/http'
 export class TicketmasterApiService {
 
   apiUrl: string;
+
   constructor(private http: HttpClient) { }
 
-  callApi() {
-    let searchUrl = `https://app.ticketmaster.com/discovery/v1/events.json?apikey=zgE7vAvkLIfsIIpuoTsD8Y7PGndTek6Y`
+  randomData() {
+    let searchUrl = `https://app.ticketmaster.com/discovery/v2/attractions.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd`
     return this.http.get(searchUrl)
   }
+
+  getMusic() {
+    let InterestsUrl = "https://app.ticketmaster.com/discovery/v2/classifications.json?size=200&apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd"
+    return this.http.get(InterestsUrl);
+  }
+
+  
 }
 
 
