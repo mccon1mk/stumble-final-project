@@ -1,3 +1,4 @@
+<img class="logo" src="./assets/stumble.png" alt="logo" />
 <h1> Stumble Main Page </h1>
 
 <div class="EventRoutes">
@@ -6,8 +7,8 @@
 
 <div class="randDataBox">
   <div class="randData" *ngFor="let rand of randomData">
-      <p>Event: {{rand['name']}}</p>
-      <img class="img" src="{{rand['images'][8]['url']}}">
-      <a href="{{rand['url']}}">Book Event</a><br>
+    <p>Event: {{rand['name']}}</p>
+    <img class="img" src="{{rand['images'][8]['url']}}">
+    <a href="{{rand['url']}}">Book Event</a><br>
   </div>
 </div>
