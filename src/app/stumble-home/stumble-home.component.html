@@ -1,14 +1,42 @@
-<img class="logo" src="./assets/stumble.png" alt="logo" />
-<h1> Stumble Main Page </h1>
-
-<div class="EventRoutes">
-  <a class="Music" routerLink="/Music" routerLinkActive="active">Music</a>
-</div>
-
-<div class="randDataBox">
-  <div class="randData" *ngFor="let rand of randomData">
-    <p>Event: {{rand['name']}}</p>
-    <img class="img" src="{{rand['images'][8]['url']}}">
-    <a href="{{rand['url']}}">Book Event</a><br>
+<section>
+  <div class="top-nav">
+    <img class="logo" src="./assets/stumble.png" alt="logo" />
+    <div class="EventRoutes">
+      <a class="Music" routerLink="/Music" routerLinkActive="active">Music</a>
+    </div>
   </div>
-</div>
+</section>
+
+<section class="search-fields">
+  <div class="search-bar-container">
+    <h1>Search for Family Friendly Events!</h1>
+    <input [(ngModel)]="textSearch" type="text" placeholder="Search Family Events Here" class="search-bar" />
+    <!-- <label>
+      Maximum Amount You'd Like To Spend:
+      <input type="number" placeholder="maximum amount" [(ngModel)]="max" />
+    </label>
+    <label>
+      Vegan
+      <input type="checkbox" name="dietary-restrictions" value="vegan" [(ngModel)]="vegan" />
+    </label>
+    <label>
+      Dairy Free
+      <input type="checkbox" name="dietary-restrictions" value="dairy-free" [(ngModel)]="dairyFree" />
+    </label> -->
+    <button class="search-btn" (click)="onSearch()">
+      Search
+    </button>
+  </div>
+</section>
+
+<section>
+  <div class="randDataBox">
+    <div class="randData" *ngFor="let rand of randomData">
+      <p>Event: {{rand['name']}}</p>
+      <img class="event-img" src="{{rand['images'][8]['url']}}">
+      <!-- <p>Event Date: {{ rand[''] }}</p>
+      <p>Event Location: {{ rand[''] }}</p> -->
+      <a href="{{rand['url']}}">Book Event</a><br>
+    </div>
+  </div>
+</section>

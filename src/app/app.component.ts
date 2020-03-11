@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TicketmasterApiService } from './ticketmaster-api.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,36 @@ import { TicketmasterApiService } from './ticketmaster-api.service';
 export class AppComponent {
   title = 'stumble-app';
 
-  constructor(private ticketMasterApi: TicketmasterApiService) { }
+  private username: string = ""
+  private password: string = ""
 
+  constructor(private authService: AuthService) {
+
+  }
+
+  Login() {
+    this.authService.Authentication(this.username, this.password).subscribe(
+      (data) => {
+
+        if (data["token"] != null) {
+          // retrieve the access token from the server           
+
+          console.log(data["token"])
+          // store the token in the localStorage             
+
+          localStorage.setItem("access-token", data["token"])
+        } else {
+          console.log("check your credentials !!")
+        }
+      }
+    )
+  }
+
+  DisplayList() {
+    this.authService.GetAllProducts().subscribe((data) => {
+      // display list in the console                  
+      console.log(data)
+    }
+    )
+  }
 }

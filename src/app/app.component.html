@@ -1,1 +1,11 @@
+<label>Username:</label>
+<input type="text" name="username" id="username" [(ngModel)]="username">
+<br>
+<label>Password:</label>
+<input type="password" name="password" id="password" [(ngModel)]="password">
+<br>
+<input type="button" value="Login" (click)="Login()">
+<br>
+<input type="button" value="Display list" (click)="DisplayList()" />
+{{username}}
 <router-outlet></router-outlet>

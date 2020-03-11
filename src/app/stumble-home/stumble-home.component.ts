@@ -13,6 +13,12 @@ export class StumbleHomeComponent implements OnInit {
 
   constructor(private __TicketmasterApiService: TicketmasterApiService) { }
 
+  textSearch = null;
+
+  userSearch = {
+    textSearch: this.textSearch
+  };
+
 
   ngOnInit() {
 
@@ -20,8 +26,21 @@ export class StumbleHomeComponent implements OnInit {
     //   console.log(data['_embedded']['attractions'][0]['images'][1]['url']);
     // })
 
-    this.__TicketmasterApiService.randomData().subscribe(resp => console.log(resp['_embedded']['attractions']))
+    // this.__TicketmasterApiService.randomData().subscribe(resp => console.log(resp['_embedded']['attractions']))
 
-    this.__TicketmasterApiService.randomData().subscribe(resp => this.randomData = resp['_embedded']['attractions'])
+    // this.__TicketmasterApiService.randomData().subscribe(resp => this.randomData = resp['_embedded']['attractions'])
+
+  }
+
+
+
+  onSearch() {
+    // let searchCriteria: any = this.textSearch;
+    this.__TicketmasterApiService.randomData().subscribe(data => {
+      this.randomData = (data as any).hits
+      console.log(data);
+    });
+
+
   }
 }
