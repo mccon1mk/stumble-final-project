@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StumbleHomeComponent } from './stumble-home/stumble-home.component';
 import { MusicComponent } from './music/music.component';
+import { SportsComponent } from './sports/sports.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StumbleHomeComponent,
-    MusicComponent
+    MusicComponent,
+    SportsComponent
   ],
   imports: [
     BrowserModule,

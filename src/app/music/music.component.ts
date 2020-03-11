@@ -10,9 +10,9 @@ export class MusicComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  //       Below is to populate the drop down with interests from ticket master website.
-  //   this.__TicketmasterApiService.getInterests()
-  //   .subscribe(Interests => this.Interests = Interests['_embedded']['classifications']);
+        // Below is to populate the drop down with interests from ticket master website.
+    // this.__TicketmasterApiService.getInterests()
+    // .subscribe(Interests => this.Interests = Interests['_embedded']['classifications']);
 
   //   this.__TicketmasterApiService.getInterests()
   //   .subscribe(Interests => console.log(Interests['_embedded']['classifications']))

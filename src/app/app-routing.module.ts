@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path: '', component: StumbleHomeComponent},
-  {path: 'Music', component: MusicComponent},
-  // {path: '**', component: AppComponent}
+  {path: '**', component: AppComponent}
 ];
 
 @NgModule({

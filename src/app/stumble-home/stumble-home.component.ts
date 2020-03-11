@@ -20,8 +20,8 @@ export class StumbleHomeComponent implements OnInit {
     //   console.log(data['_embedded']['attractions'][0]['images'][1]['url']);
     // })
 
-    this.__TicketmasterApiService.randomData().subscribe(resp => console.log(resp['_embedded']['attractions']))
+    // this.__TicketmasterApiService.randomData().subscribe(resp => console.log(resp['_embedded']['attractions']))
 
-    this.__TicketmasterApiService.randomData().subscribe(resp => this.randomData = resp['_embedded']['attractions'])
+    // this.__TicketmasterApiService.randomData().subscribe(resp => this.randomData = resp['_embedded']['attractions'])
   }
 }

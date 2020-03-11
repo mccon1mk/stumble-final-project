@@ -1,0 +1,7 @@
+<div class="sportsContainer">
+  <div class="sports" *ngFor="let sport of sports">
+      <p>Event: {{sport['name']}}</p>
+      <img class="img" src="{{sport['images'][0]['url']}}">
+      <a href="{{sport['url']}}">Book Event</a><br>
+  </div>
+</div>
