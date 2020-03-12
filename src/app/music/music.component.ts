@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TicketmasterApiService} from '../ticketmaster-api.service';
 
 @Component({
   selector: 'app-music',
@@ -7,17 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MusicComponent implements OnInit {
 
-  constructor() { }
+  public music;
+
+  constructor(private _TicketmasterApiService: TicketmasterApiService) { }
 
   ngOnInit() {
-  //       Below is to populate the drop down with interests from ticket master website.
-  //   this.__TicketmasterApiService.getInterests()
-  //   .subscribe(Interests => this.Interests = Interests['_embedded']['classifications']);
 
-  //   this.__TicketmasterApiService.getInterests()
-  //   .subscribe(Interests => console.log(Interests['_embedded']['classifications']))
-  // }
 
   }
-
+ getMusic() {
+this._TicketmasterApiService.getMusic().subscribe(resp => this.music = resp['_embedded'] ['events']);
+ }
 }

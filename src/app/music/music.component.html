@@ -1,7 +1,7 @@
-<p>Music</p>
-<div>
-  <p>Interests</p>
-  <select id="Interests">
-    <option *ngFor="let Interest of Interests">{{Interest.type.name}}</option>
-  </select>
+<div class="musicContainer">
+  <div class="music" *ngFor="let event of music">
+      <p>Event: {{event['name']}}</p>
+      <img class="img" src="{{event['images'][0]['url']}}">
+      <a href="{{event['url']}}">Book Event</a><br>
+  </div>
 </div>

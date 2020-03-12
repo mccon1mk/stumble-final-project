@@ -16,8 +16,8 @@ export class TicketmasterApiService {
   }
 
   getMusic() {
-    let InterestsUrl = "https://app.ticketmaster.com/discovery/v2/classifications.json?size=200&apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd"
-    return this.http.get(InterestsUrl);
+    let musicUrl =`https://app.ticketmaster.com/discovery/v2/events.json?apikey=oJg1ssT8GkVknKJ2kFY8qAx3Dzw4GeYd&keyword=music`
+    return this.http.get(musicUrl);
   }
 
   
